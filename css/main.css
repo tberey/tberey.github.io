@@ -1302,7 +1302,7 @@
      width: 100%;
      height: 100%;
      min-height: 720px;
-     display: table;
+     /* display: table; */
      position: relative;
      text-align: center;
  }
@@ -1315,7 +1315,7 @@
     width: 100%;
     height: 100%;
     min-height: 720px;
-    display: table;
+    /* display: table; */
     position: relative;
     text-align: center;
 }
@@ -1328,7 +1328,7 @@
     width: 100%;
     height: 100%;
     min-height: 720px;
-    display: table;
+    /* display: table; */
     position: relative;
     text-align: center;
 }
@@ -1341,7 +1341,7 @@
     width: 100%;
     height: 100%;
     min-height: 720px;
-    display: table;
+    /* display: table; */
     position: relative;
     text-align: center;
 }
@@ -1354,7 +1354,7 @@
     width: 100%;
     height: 100%;
     min-height: 720px;
-    display: table;
+    /*display: table;*/
     position: relative;
     text-align: center;
 }
@@ -1369,7 +1369,7 @@
  }
  
  .hello-content {
-     display: table-cell;
+     /*display: table-cell;*/
      vertical-align: middle;
      text-align: center;
      -webkit-transform: translateY(-2.1rem);

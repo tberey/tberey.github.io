@@ -41,10 +41,10 @@
 			<div>
 				<!-- menu -->
 				<div class="top-bar">
-					<a class="menu-toggle" href="#" style="background:#07002c; margin-top:5%;"><span>Menu</span></a>
-					<nav id="main-nav-wrap" style="background:#0d024475;">
+					<a class="menu-toggle" href="#" style="background:#07002c96; margin-top:5%;"><span>Menu</span></a>
+					<nav id="main-nav-wrap" class="set-height-js" style="background:#0d024475;overflow:auto;max-height: 500px;min-height: 0px;">
 						<ul class="main-navigation" style="display:none;">
-							Page Navigation:
+							In-page Navigation:
 							<li class="current"><a class="smoothscroll" href="#hello" title="">Thomas Berey</a></li>
 							<li><a class="smoothscroll" href="#intro" title="">Introduction</a></li>
 							<li><a class="smoothscroll" href="#testimonials" title="">Testimonials</a></li>
@@ -64,12 +64,20 @@
 			</div>
 		</header>
 
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+				if (!height || isNaN(height)) var height = 570;
+				document.getElementsByClassName('set-height-js')[0].style.maxHeight = `${(height-65)}px`;
+			});
+		</script>
+
 		<!-- #hello section -->
 		<section id="hello">
 			<div class="hello-overlay"></div>
 			<div class="hello-content">
 				<div class="row">
-					<div class="col-twelve">
+					<div class="col-twelve" style="margin-top:30%;">
 						<h5>Hello, World.</h5><br>
 						<h1>Thomas Berey</h1>
 						<h2 style="color:#7b7b7b;">Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Front & Back-End, Professional
@@ -170,7 +178,7 @@
 						</li>
 						<li>
 							<div class="progress percent95"></div>
-							<strong>CSS/HTML/JS/jQuery</strong>
+							<strong>CSS&nbsp;&nbsp;|&nbsp;&nbsp;HTML&nbsp;&nbsp;|&nbsp;&nbsp;JS/jQuery</strong>
 						</li>
 						<li>
 							<div class="progress percent70"></div>
@@ -182,7 +190,7 @@
 						</li>
 						<li>
 							<div class="progress percent55"></div>
-							<strong>SQL/PSQL/MySQL</strong>
+							<strong>SQL&nbsp;&nbsp;|&nbsp;&nbsp;PSQL&nbsp;&nbsp;|&nbsp;&nbsp;MySQL</strong>
 						</li>
 						<li>
 							<div class="progress percent20"></div>
@@ -197,6 +205,7 @@
 		<section id="testimonials" class="grey-section">
 			<div class="row section-hello">
 				<div class="col-twelve">
+					<i class="fa fa-star"></i>
 					<h2>Testimonials</h2>
 				</div>
 			</div><br>
@@ -205,7 +214,7 @@
 					<div class="grid-2">
 						<center>
 							<h3>Staff Award Nomination</h3>
-							<img src="images/myStaffAward.jpg" alt="your alt description here"
+							<img src="images/myStaffAward.jpg" alt="Staff Award"
 								style="width:100px;height:140px;">
 							<p style="padding-top:5px;">Our development team, responsible for spear heading the push into
 								providing web-based services, was nominated for the Staff Awards 2020. Our contribution has
@@ -232,7 +241,7 @@
 				</div>
 				<div class="row section-hello">
 					<div class="col-twelve">
-						<img src="images/quotation.png" style="width:100px;height:100px;">
+						<img alt="Quote Marks" src="images/quotation.png" style="width:100px;height:100px;">
 						<center><i>
 								<h3><q>It takes us to another level in customer service and a leading player in customer
 										service commitment.</q></h3>
@@ -250,77 +259,91 @@
 			<div class="overlay"></div>
 			<div class="row section-hello">
 				<div class="col-twelve">
+					<i class="fa fa-film"></i>
 					<h2>Gallery</h2>
 				</div>
 			</div>
 			<div class="row services-content">
+				<center><div class="icon" style="font-size: xx-small;"><strong><i class="fa fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-hand-o-down"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></strong></div><br></center>
 				<div id="owl-slider" class="owl-carousel services-list">
 					<div class="service">
 						<div class="service-content">
-							<div class="grid-2" style="font-size:14.5px;"><a href="images/browserGame.png" target="_blank"><img
-										src="images/browserGame.png" style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>JavaScript (OOP) + HTML + CSS</b>: A
-								simple browser game, written in pure vanilla JavaScript, using an object-oriented
-								programming approach. With a stolen diamond in possession, avoid being caught by patrolling
-								guards and traps, whilst collecting as many loot pickups as possible, all for the highest
-								score possible. Adjust settings like patrol speed and number of patrols.</div>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-content">
 							<div class="grid-2" style="font-size:14px;"><a href="images/chatroomAPI.png" target="_blank"><img
-										src="images/chatroomAPI.png" style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>TypeScript + Node.js + Socket.io +
-									Express & Express-Session + MySQL DB</b>: A REST API browser chat app, using web sockets
+										src="images/chatroomAPI.png" alt="Project 1" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>TypeScript</h6> A REST API browser chat app, using web sockets
 								to allow users to concurrently connect to a server, for real-time group conversations.
-								Individual user accounts needed for login and verification, supported by a SQL Database.
+								Individual user accounts needed for login and verification, supported by a database.
 								Users can register, login and connect to a chat room, as well as access account options like
 								change username/password.</div>
 						</div>
 					</div>
 					<div class="service">
 						<div class="service-content">
-							<div class="grid-2" style="font-size:14.5px;"><a href="images/my-node-api.png" target="_blank"><img
-										src="images/my-node-api.png" style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>TypeScript + Node.js + Express +
-									MongoDB</b>: A REST API that allows user to perform CRUD operations upon a database
-								through a locally hosted server, via http requests and tcp connections. Demonstrates a
-								full-stack development with fully functioning client & server sides, while also making use
-								of a non-relational, NoSQL, database.</div>
+							<div class="grid-2" style="font-size:14px;"><a href="images/flappy-game.png" target="_blank"><img
+										src="images/flappy-game.png" alt="Project 2" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Java</h6>A lightweight and simple Flappy Bird type game, that is a gui application, using the Java swing class. Simply click, or press space bar, to start the game, and perform an in-game jump. The aim is to get as high a score as possible, while avoiding the pillars. Tests reaction speed.</div>
 						</div>
 					</div>
 					<div class="service">
 						<div class="service-content">
-							<div class="grid-2" style="font-size:14.5px;"><a href="images/date-validation.png"><img
-										src="images/date-validation.png" style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>JavaScript</b>: A small but robust
-								date validation project, for any given free-text field, for circumstances that are unique.
-								More advanced than any exisitng HTML validation, in that it dynamically prevents invalid
-								inputs, as the user is inputting, without any disruptions.</div>
+							<div class="grid-2" style="font-size:14px;"><a href="images/front-end-standards.png"><img
+										src="images/front-end-standards.png" alt="Project 3"
+										style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Client Development Standards</h6>A collection of front-end views, showcasing attention to detail and a style that reflects the mood of a project or client.</div>
 						</div>
 					</div>
 					<div class="service">
 						<div class="service-content">
-							<div class="grid-2" style="font-size:14.5px;"><a href="images/front-end-standards.png"><img
-										src="images/front-end-standards.png" alt="Web Form Image."
-										style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>Front-End Devlopment + High QA
-									Standards</b>: A collection of front-end views, showcasing attention to detail and an
-								inviting presentation, styled to reflect the mood or subject of a project or client.</div>
+							<div class="grid-2" style="font-size:14px;"><a href="images/dev-standards.png" target="_blank"><img
+										src="images/dev-standards.png" alt="Project 4" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Clean, Clear & Robust</h6>Well written and organised code, that lends itself to readability, and adheres to conventions or standard practises. This all creates minimal friction within development teams, between PRs and branches, allowing developers to easily jump in at any point.</div>
 						</div>
 					</div>
 					<div class="service">
 						<div class="service-content">
-							<div class="grid-2" style="font-size:14.5px;"><a href="images/Golang-api.png"><img
-										src="images/Golang-api.png" style="width:900px;height:180px;"
-										title="Click to see full sized image."></a><b>Golang</b>: REST APIs developed in Go,
-								ranging from a simple input Reverse String http server, to a Contact Lookup server, which
-								uses a no database system to make use of Golang's robust design to be ran indefinitely
-								(hardware permitting).</div>
+							<div class="grid-2" style="font-size:14px;"><a href="images/proj-spotlight.png" target="_blank"><img
+										src="images/proj-spotlight.png" alt="Project 5" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>TypeScript</h6>A graphing data and analysis tool. This application collects data from social media sources, to extrapolate and illustrate potential stock movements or trends. Presented in a graphical format, providing options to get the data you need and view it in the best way for you. Utilises AWS S3, for CSV exports storage/retrieval.</div>
 						</div>
 					</div>
-				</div>
-			</div><center><<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>></center><br>
+					<div class="service">
+						<div class="service-content">
+							<div class="grid-2" style="font-size:14px;"><a href="images/my-node-api.png" target="_blank"><img
+										src="images/my-node-api.png" alt="Project 5" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>TypeScript</h6>A REST API that allows user to perform CRUD operations upon a database
+										through a locally hosted server, via http requests and tcp connections. Demonstrates a
+										full-stack development with a fully functioning client & server, and the support of a non-relational, NoSQL, database (MongoDB).</div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-content">
+							<div class="grid-2" style="font-size:14px;"><a href="images/poker-game.png" target="_blank"><img
+										src="images/poker-game.png" alt="Project 6" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Java</h6>A console based Blackjack card game, that pits you against decision making logic and conditionals, represented by the Dealer. Beat the Dealer in being closer to blackjack (21 card total), by hitting or sticking.</div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-content">
+							<div class="grid-2" style="font-size:14px;"><a href="images/Golang-api.png" target="_blank"><img
+										src="images/Golang-api.png" alt="Project 7" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Golang</h6>REST APIs developed in the Google developed language Go. Ranging from a simple input Reverse String HTTP Server, to a Contact Lookup Server. The Contact Lookup API uses an in-memory database (no-SQL & non-relational) system, to make use of Go's robust design to be ran indefinitely, hardware permitting.</div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-content">
+							<div class="grid-2" style="font-size:14px;"><a href="images/logging-sample.png" target="_blank"><img
+										src="images/logging-sample.png" alt="Project 8" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Click to see full sized image."></a><h6>Logging</h6>Detailed, reliabe and consistent logging, that extensively penetrates any system, application or project. Achieved through a self-developed logging module, that can be incorprotated into any projects, seemlessly. Useful for debugging, development and production.<h6><a href="https://github.com/tberey/simple-txt-logger" target="_blank">Link to 'Simple-Txt-Logger' Repo</a></h6></div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-content">
+							<div class="grid-2" style="font-size:14px;"><a href="https://github.com/tberey?tab=repositories" target="_blank"><img
+										src="images/github-repos.png" alt="Project 9" style="width:900px;height:180px;border:2px solid darkblue;"
+										title="Go To All Repositories..."><h6>And Even More...</h6>Projects found in my Github repository.<h6 style="color:#7b7b7b">Click to see all my repositories</h6></a></div>
+						</div>
+					</div>
+				</div><br>
 		</section>
 
 		<!-- #project-spotlight section -->
@@ -328,23 +351,23 @@
 			<div class="row intro-content">
 				<div class="row section-hello">
 					<div class="col-twelve">
+						<i class="fa fa-camera"></i>
 						<h2>Project Spotlight</h2>
 					</div>
 				</div>
 				<div class="col-six tab-full">
 					<div class="grid-2">
 						<center>
-							<h6>TypeScript + Node.js + Socket.io + Express & Express-Session + MySQL DB</h6>
-							<img style="height:310px;width:330px;" src="images/chatroomspotlight.png">
+							<h6>TypeScript + NodeJS + Electron + Express + Chartjs + MySQL DB + AWS</h6>
+							<a href="images/proj-spotlight.png" target="_blank"><img style="height:350px;width:400px;border:2px solid darkblue;" alt="Project Spotlight" src="images/proj-spotlight.png" title="Click to see full sized image."></a>
 						</center>
 					</div>
 				</div>
 				<div class="col-six tab-full">
 					<div class="grid-2">
-						<p>A REST API that allows users to concurrently connect to a http server, and chat in real-time.
-							Also offers user accounts for authetication and validation, along with account management
-							features.</p>
-							<center><b><u><a href="https://github.com/tberey/ts-node-js-sql-chat-api"
+						<center><h3>'Social Stocks'</h3></center>
+						<p>This project, Social Stocks, is a graphing data and analysis tool. This web, or desktop (electron), application collects data from social media sources (such as the Twitter or Reddit APIs), as well as on google search trends, to extrapolate and illustrate potential stock movements or trends, into a user-friendly graphical format. There are many options in order to get the data you need and view it in the best way for you. Utilises AWS S3, for CSV exports storage and retrieval.</p>
+							<center><b><u><a href="https://github.com/tberey/social-stocks#readme"
 							class="button stroke" target="_blank">View Project</a></u></b></center>
 					</div>
 				</div>
@@ -402,7 +425,7 @@
 			<hr>
 			<div class="row section-hello">
 				<div class="col-twelve">
-					&copy;Thomas Berey (All Personal Data & Projects)
+					&copy;Thomas Berey (All Personal Data, Projects & Ideas)
 				</div><br><br><br><p></p>
 			</div>
 			<div id="go-top">

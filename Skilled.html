@@ -42,11 +42,11 @@
 			<!-- menu -->
 			<div class="top-bar">
 				<a class="menu-toggle" href="#"
-					style="background:#07002c; margin-top:5%;"><span>Menu</span></a>
+					style="background:#07002c96; margin-top:5%;"><span>Menu</span></a>
 
-				<nav id="main-nav-wrap" style="background:#0d024475;">
+				<nav id="main-nav-wrap" class="set-height-js" style="background:#0d024475;overflow:auto;max-height: 550px;">
 					<ul class="main-navigation" style="display:none;">
-						<li><a class="hover-anchor" href="index.html" title=""><i class="icon-home"></i> HOME</a><br></li>Page Navigation:
+						<li><a class="hover-anchor" href="index.html" title=""><i class="icon-home"></i> HOME</a><br></li>In-page Navigation:
 						<li class="current"><a class="smoothscroll" href="#skilled" title="">Thomas Berey</a></li>
                         <li><a class="smoothscroll" href="#accolades" title="">Accolades</a>
 						</li>
@@ -65,12 +65,20 @@
 		</div>
 	</header>
 
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+			if (!height || isNaN(height)) var height = 570;
+			document.getElementsByClassName('set-height-js')[0].style.maxHeight = `${(height-65)}px`;
+		});
+	</script>
+
 	<!-- #hello section -->
-	<section id="skilled">
-		<div class="hello-overlay"></div>
-		<div class="hello-content">
+	<section id="skilled" style="width:100%;">
+		<div class="hello-overlay" style="width:100%;"></div>
+		<div class="hello-content" style="width:100%;">
 			<div class="row">
-				<div class="col-twelve">
+				<div class="col-twelve" style="margin-top:30%;">
 					<h5 style="font-size: xx-large;">Skilled</h5><br>
 					<h1>Thomas Berey</h1>
 					<p><b style="background-color: rgba(4, 4, 43, 0.87);">&nbsp;&nbsp;<a target="_blank"
@@ -94,7 +102,7 @@
 					<i class="fa fa-trophy"></i>
 					<h2>Accolades</h2>
 					<h4>Staff Award</h4>
-							<img src="images/myStaffAward.jpg" alt="Staff Award Image"
+							<img src="images/myStaffAward.jpg" alt="Staff Award"
 								style="width:180px;height:240px;">
 							<p>Nominated for the Stoke City Council Staff Awards.<br>Recognised for the outstanding contribution to Stoke Council's web presence and online services.<br>'#StokeIsOnTheUp Award'; which is the culmination of our push for a digitally strong council.</p>
 				</div>
@@ -111,9 +119,8 @@
 				<div class="row">
 					<i class="fa fa-check"></i>
 					<h2>Ability Matrix</h2>
-					<div>L = Language | FW = Framework | LB = Library | OS = Operation System | IDE = Integrated Development Environment</div>
-                    <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width: 754px;color: black;margin-left: 1%;" class="tg"><colgroup><col><col><col><col></colgroup><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#656565;text-align:center;vertical-align:middle"></th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Client-Side</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Server-Side</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Other</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#cbcefb;text-align:center;vertical-align:top">Entry-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top">Python (L), C#/.NET (L), PHP (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9bc2f8;text-align:center;vertical-align:top">Junior-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top">React (FW), Vue (FW)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top">Golang (L), Ruby (L), Rails (FW)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffccc9;text-align:center;vertical-align:top">Mid-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">JavaScript/TypeScript (L), jQuery (LB), CSS/SCSS (L), HTML (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">TypeScript/JavaScript/Node (L), SQL/PSQL/MySQL (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">Terminal/Cmd/Shell, Linux/Debian (OS), Windows (OS), Sockets, REST, HTTP/HTTPS, Visual Studio/VS Code (IDE), IntelliJ (IDE), notepad++</td></tr></table>
-					* My personally preferred development environment is Linux
+					<div>L = Language&nbsp;&nbsp;|&nbsp;&nbsp;FW = Framework&nbsp;&nbsp;|&nbsp;&nbsp;LB = Library&nbsp;&nbsp;|&nbsp;&nbsp;OS = Operation System&nbsp;&nbsp;|&nbsp;&nbsp;IDE = Integrated Development Environment</div>
+                    <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width:100%;color: black;margin-left: 1%;" class="tg"><colgroup><col><col><col><col></colgroup><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#656565;text-align:center;vertical-align:middle"></th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Client-Side</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Server-Side</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:center;vertical-align:top">Other</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#cbcefb;text-align:center;vertical-align:top">Entry-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top">Python (L), C#/.NET (L), PHP (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#cbcefb;text-align:left;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9bc2f8;text-align:center;vertical-align:top">Junior-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top">React (FW), Vue (FW)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top">Golang (L), Ruby (L), Rails (FW)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#9bc2f8;text-align:left;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffccc9;text-align:center;vertical-align:top">Mid-Level</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">JavaScript/TypeScript (L), jQuery (LB), CSS/SCSS (L), HTML (L), Markdown (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">TypeScript/JavaScript[Node] (L), SQL/PSQL/MySQL (L)</td><td style="font-family:Arial, sans-serif;font-size:11px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffccc9;text-align:left;vertical-align:top">Terminal/Cmd/Shell (L), Linux/Debian (OS), Windows (OS), Sockets, REST, HTTP/HTTPS, Visual Studio/VS Code (IDE), IntelliJ (IDE), notepad++</td></tr></table>
 				</div>
 			</center>
 		</div><br>
@@ -128,16 +135,15 @@
 				<div class="row">
 					<i class="fa fa-gear"></i>
 					<h2>Training</h2>
-                    <ul>
-						<li>Fire Warden; <i style="font-size:small;">2016/17/18</i></li>
-						<li>Health & Safety and Evacuation; <i style="font-size:small;">2016/17/18/19/20/21</i></li>
-						<li>'Manager Left in Charge'; <i style="font-size:small;">2016/17</i></li>
-						<li>GDPR 2018; <i style="font-size:small;">2018/19/20/21</i></li>
-						<li>Negotiating and Business Practises; <i style="font-size:small;">2018</i></li>
-						<li>Counter Fraud, Bribery and Corruption; <i style="font-size:small;">2021</i></li>
-						<li>Resilience, Wellbeing and Mental Health; <i style="font-size:small;">2021</i></li>
-						</i>
-					</ul>
+                    <p>
+						- Fire Warden; <i style="font-size:small;">2016/17/18 -</i><br>
+						- Health & Safety and Evacuation; <i style="font-size:small;">2016/17/18/19/20/21 -</i><br>
+						- 'Manager Left in Charge'; <i style="font-size:small;">2016/17 -</i><br>
+						- GDPR 2018; <i style="font-size:small;">2018/19/20/21 -</i><br>
+						- Negotiating and Business Practises; <i style="font-size:small;">2018 -</i><br>
+						- Counter Fraud, Bribery and Corruption; <i style="font-size:small;">2021 -</i><br>
+						- Resilience, Wellbeing and Mental Health; <i style="font-size:small;">2021 -</i><br>
+					</p>
 				</div>
 			</center>
 		</div><br>
@@ -193,7 +199,7 @@
 		<hr>
 		<div class="row section-hello">
 			<div class="col-twelve">
-				&copy;Thomas Berey (All Personal Data & Projects)
+				&copy;Thomas Berey (All Personal Data, Projects & Ideas)
 			</div><br><br><br>
 			<p></p>
 		</div>

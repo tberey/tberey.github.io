@@ -57,11 +57,11 @@
 			<!-- menu -->
 			<div class="top-bar">
 				<a class="menu-toggle" href="#"
-					style="background:#07002c; margin-top:5%;"><span>Menu</span></a>
+					style="background:#07002c96; margin-top:5%;"><span>Menu</span></a>
 
-				<nav id="main-nav-wrap" style="background:#0d024475;">
+				<nav id="main-nav-wrap" class="set-height-js" style="background:#0d024475;overflow:auto;max-height: 550px;">
 					<ul class="main-navigation" style="display:none;">
-						<li><a class="hover-anchor" href="index.html" title=""><i class="icon-home"></i> HOME</a><br></li>Page Navigation:
+						<li><a class="hover-anchor" href="index.html" title=""><i class="icon-home"></i> HOME</a><br></li>In-page Navigation:
 						<li class="current"><a class="smoothscroll" href="#academia" title="">Thomas Berey</a></li>
 						<li><a class="smoothscroll" href="#high-school" title="">School (GCSEs)</a>
 						</li>
@@ -80,12 +80,20 @@
 		</div>
 	</header>
 
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+			if (!height || isNaN(height)) var height = 570;
+			document.getElementsByClassName('set-height-js')[0].style.maxHeight = `${(height-65)}px`;
+		});
+	</script>
+
 	<!-- #hello section -->
 	<section id="academia">
 		<div class="hello-overlay"></div>
 		<div class="hello-content">
 			<div class="row">
-				<div class="col-twelve">
+				<div class="col-twelve" style="margin-top:30%;">
 					<h5 style="font-size: xx-large;">Academic</h5><br>
 					<h1>Thomas Berey</h1>
 					<p><b style="background-color: rgba(4, 4, 43, 0.87);">&nbsp;&nbsp;<a target="_blank"
@@ -233,7 +241,7 @@
 		<hr>
 		<div class="row section-hello">
 			<div class="col-twelve">
-				&copy;Thomas Berey (All Personal Data & Projects)
+				&copy;Thomas Berey (All Personal Data, Projects & Ideas)
 			</div><br><br><br>
 			<p></p>
 		</div>
