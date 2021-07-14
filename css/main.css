@@ -1295,18 +1295,21 @@
   */
  #hello {
      background: #01010fe8 url(../images/intro-pic.jpg) no-repeat center bottom;
-     -webkit-background-size: auto;
-     -moz-background-size: auto;
-     -o-background-size: auto;
-     -ms-background-size: auto;
-     background-size:auto;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     -ms-background-size: cover;
+     background-size:cover;
      background-attachment: fixed;
      width: 100%;
      height: 100%;
-     min-height: 720px;
+     /* min-height: 720px; */
      /* display: table; */
      position: relative;
      text-align: center;
+ }
+ @media screen {
+     
  }
  #academia {
     background: #01010fe8 url(../images/academia.jpg) no-repeat center bottom;
@@ -1316,7 +1319,7 @@
     background-attachment: fixed;
     width: 100%;
     height: 100%;
-    min-height: 720px;
+    /* min-height: 720px; */
     /* display: table; */
     position: relative;
     text-align: center;
