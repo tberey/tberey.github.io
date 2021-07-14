@@ -1308,9 +1308,6 @@
      position: relative;
      text-align: center;
  }
- @media screen {
-     
- }
  #academia {
     background: #01010fe8 url(../images/academia.jpg) no-repeat center bottom;
     -webkit-background-size: cover;
