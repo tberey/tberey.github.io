@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<!-- Create dynamic viewport. Assign basic metadata. -->
+	<meta charset="utf-8">
+	<title>Volunteer | Thomas Berey</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="favicon.png" sizes="16x16" type="img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Styling -->
+	<style>
+		.hover-anchor {
+			color: white !important;
+		}
+
+		.hover-anchor:hover {
+			color: #8cb8e2 !important;
+		}
+
+		* {
+		box-sizing: border-box;
+		}
+
+		.timeline-body {
+		background-color: #474e5d;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline {
+		position: relative;
+		max-width: 500px;
+		margin: 0 auto;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-color: #070f82;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+		}
+
+		/* Container around content */
+		.container {
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+		}
+
+		/* The circles on the timeline */
+		.container::after {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		right: -17px;
+		background-color: #0b006bd7;
+		border: 4px solid #d1e3f0;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+		}
+
+		/* Place the container to the left */
+		.left {
+		left: -1%;
+		}
+
+		/* Place the container to the right */
+		.right {
+		left: 50.8%;
+		}
+
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid #d1e3f0;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent #d1e3f0;
+		}
+
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid #d1e3f0;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent #d1e3f0 transparent transparent;
+		}
+
+		/* Fix the circle for containers on the right side */
+		.right::after {
+		left: -16px;
+		}
+
+		/* The actual content */
+		.content {
+		padding: 20px 30px;
+		background-color: #d1e3f0;
+		position: relative;
+		border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeline on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+		/* Place the timeline to the left */
+		.timeline::after {
+		left: 31px;
+		}
+		
+		/* Full-width containers */
+		.container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+		}
+		
+		/* Make sure that all arrows are pointing leftwards */
+		.container::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+		}
+
+		/* Make sure all circles are at the same spot */
+		.left::after, .right::after {
+		left: 15px;
+		}
+		
+		/* Make all right containers behave like the left ones */
+		.right {
+		left: 0%;
+		}
+		}
+	</style>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/vendor.css">
+
+	<!-- Scripting -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+</head>
+
+<body id="top">
+	<!-- header -->
+	<header>
+		<div>
+			<!-- menu -->
+			<div class="top-bar">
+				<a class="menu-toggle" href="#"
+					style="background:#07002c96; margin-top:5%;"><span>Menu</span></a>
+
+				<nav id="main-nav-wrap" class="set-height-js" style="background:#0d024475;overflow:auto;max-height:550px;">
+					<ul class="main-navigation" style="display:none;">
+						<li><a class="hover-anchor" href="index.html" title=""><i class="icon-home"></i> HOME</a><br></li>In-page Navigation:
+						<li class="current"><a class="smoothscroll" href="#volunteering" title="">Thomas Berey</a></li>
+                        <li><a class="smoothscroll" href="#mencap" title="">Mencap</a>
+						</li><br>
+                        Explore Pages:
+							<li><a class="hover-anchor" href="Person.html">Person</a></li>
+							<li><a class="hover-anchor" href="Academia.html">Academic</a></li>
+                            <li><a class="hover-anchor" href="Professional.html">Professional</a></li>
+							<li><a class="hover-anchor" href="Skilled.html">Skilled</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+			if (!height || isNaN(height)) var height = 570;
+			document.getElementsByClassName('set-height-js')[0].style.maxHeight = `${(height-65)}px`;
+		});
+	</script>
+
+	<!-- #hello section -->
+	<section id="volunteering">
+		<div class="hello-overlay"></div>
+		<div class="hello-content">
+			<div class="row">
+				<div class="col-twelve" style="margin-top:30%;">
+					<h5 style="font-size: xx-large;">Volunteer</h5><br>
+					<h1>Thomas Berey</h1>
+					<p><b style="background-color: rgba(4, 4, 43, 0.87);">&nbsp;&nbsp;<a target="_blank"
+								href="mailto:tomberey1@gmail.com"
+								target="_top"><u>tomberey1@gmail.com</u></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a
+								target="_blank"
+								href="https://www.github.com/tberey"><u>GitHub/tberey</u></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Liverpool,
+							UK&nbsp;&nbsp;</b></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- #job section -->
+	<section id="mencap" style="background-color: #d1e3f0;">
+		<br><br>
+		<div class="overlay"></div>
+		<div class="row services-content">
+			<center>
+				<div class="row">
+					<i class="fa fa-briefcase"></i>
+					<h2>Mencap Liverpool & Sefton</h2>
+                    <h3>Learning Disabilities Charity</h3>
+					<p>2021 - Present; Liverpool, Merseyside</p>
+                    <p style="font-size:medium;max-width: 90%;">Mencap is a charity that supports members with learning disabilities.<br>
+					A highly rewarding role, where I offer support and friendship, while promoting equality and opportunities for all members, who each have specific needs or requirements. Entirely people focused, this is a joy to be a part of, and I regularly attend planned sessions and events along with the members, and other volunteers, designed to enrich who attend. This role, so far, has taught me many things, most importantly is an identity first approach to all people, as we are not defined by anything but who we are as a person.</p>
+					<div class="icon"><strong style="font-size: small;font-style: italic;font-weight: 800;">
+						<i class="icon-earth"></i>
+						&nbsp;www.mencapliverpool.org.uk</strong></div>
+				</div>
+			</center>
+		</div><br>
+	</section>
+
+	<!-- #contact section -->
+	<section id="contact">
+		<div class="row section-intro" style="margin-top: -5%;">
+			<div class="col-twelve">
+				<h1>Contact</h1>
+			</div>
+			<p>
+				If you would like to discuss any opportunities, or ask any questions at all, please don't hesitate in
+				connecting through the various channels:
+			</p>
+		</div>
+
+		<div class="row contact-info">
+			<div class="col-four tab-full">
+				<a target="_blank" href="https://uk.linkedin.com/in/thomas-berey">
+					<div class="icon">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</div>
+					<h5>LinkedIn</h5>
+					<p>Thomas Berey</p>
+				</a>
+			</div>
+
+			<div class="col-four tab-full">
+				<a target="_blank" href="https://github.com/tberey">
+					<div class="icon">
+						<i class="fa fa-github" aria-hidden="true"></i>
+					</div>
+					<h5>Github</h5>
+					<p>tberey</p>
+				</a>
+			</div>
+
+			<div class="col-four tab-full">
+				<a target="_blank" href="mailto:tomberey1@gmail.com">
+					<div class="icon">
+						<i class="icon-mail" aria-hidden="true"></i>
+					</div>
+					<h5>Email</h5>
+					<p>tomberey1@gmail.com</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- #footer -->
+	<footer>
+		<hr>
+		<div class="row section-hello">
+			<div class="col-twelve">
+				&copy;Thomas Berey (All Personal Data, Projects & Ideas)
+			</div><br><br><br>
+			<p></p>
+		</div>
+		<div id="go-top">
+			<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		</div>
+	</footer>
+
+	<div id="preloader">
+		<div id="loader"></div>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
